@@ -1,0 +1,341 @@
+body{
+	color: #000000;
+	font-family: "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+a{
+	color: blue;
+	text-decoration: none;
+}
+
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: #D1DAF7;
+	text-align: center;
+	border-bottom: 1px solid #B8C8EC;
+	z-index: 3;
+}
+
+#logo{
+	height: 4em;
+	padding: 0.5em 0.5em 0.5em 1em;
+	float: left;
+}
+
+header h1{
+	float: right;
+	padding-right: 1em;
+}
+
+section{
+    top: 5em;
+    float: left;
+    left: 0;
+    bottom: 1.8em;
+    position: fixed;
+    overflow: auto;
+    right: 0;
+    margin-right: 22em;
+    padding-right: 2em;
+}
+
+#content{
+	padding: 1em 1em 2em 1em;
+	width: 100%;
+}
+
+#filterBar{
+	width: 100%;
+	float: left;
+}
+
+#fileList{
+	width: 100%;
+	float: left;
+	margin-bottom: 2em;
+}
+
+#txtFilterBar{
+	width: 20em;
+}
+
+#shortLinks{
+	float:right;
+	padding-right: 2em;
+	font-size: 0.8em;
+}
+
+#actualPath{
+	padding-top: 2em;
+	float: left;
+}
+
+#elemCount{
+	padding-top: 2em;
+	float: right;
+	padding-right: 2em;
+}
+
+#languageStrip{
+	float: right;
+	padding-right: 1em;
+	position: fixed;
+	top: 0.5em;
+	left: 19em;
+	z-index: 11;
+}
+
+#fileList{
+	padding-top: 0.5em;
+}
+
+#fileList table{
+	width: 100%;
+	border-collapse: collapse;
+	font-size: 0.9em;
+}
+
+table thead tr td{
+	font-weight: bold;
+	padding: 0.5em;
+}
+
+table tbody tr td{
+	padding: 0.5em;
+}
+
+.filetypeText{
+    position: absolute;
+    font-family: "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    left: 2.1em;
+    width: 2.8em;
+    font-size: 1.05em;
+    font-weight: bold;
+    margin-top: -1.55em;
+    text-align: center;
+}
+.filetypeText.size4{
+    left: 2.25em;
+    font-size: 1em;
+}
+.filetypeText.size5{
+    left: 2.85em;
+    font-size: 0.8em;
+}
+
+.white{
+    color: #ffffff;
+}
+
+.darkblue{
+    color: #4c6c7b;
+}
+
+.darkyellow{
+    color: #a07903;
+}
+
+.pink{
+    color: #d70751;
+}
+
+.deletePicture{
+	width: 1em;
+	height: 1em;
+	cursor: pointer;
+	padding-right: 0.6em;
+}
+
+aside{
+	position: fixed;
+	width: 20em;
+	right: 0;
+	top: 5em;
+	padding: 1em;
+	float: right;
+	z-index: 2;
+	background-color: white;
+    bottom: 1.8em;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-left: 1px solid black;
+}
+
+#newFolder{
+	position: relative;
+	top: 0.5em;
+	left: 1em;
+	width: 1.5em;
+	height: 1.5em;
+	cursor: pointer;
+}
+
+.bar {
+	height: 18px;
+	background: #D1DAF7;
+	padding: 0.2em 0 0.2em 0;
+}
+
+#progress{
+	border: 1px solid black;
+}
+
+#dropzone.hover {
+	background: #dcdcdc url("../images/dropIt.png") no-repeat fixed center;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+
+.uploadButton{
+	background: #e5e5e5 url("../images/upload.png") no-repeat 5% center;
+	border: 1px solid black;
+	height: 2em;
+	padding: 0 0 0 1.5em;
+	margin: 0;
+	cursor: pointer;
+	float: left;
+}
+
+.uploadAllButton{
+	background: #e5e5e5 url("../images/upload.png") no-repeat 5% center;
+	border: 1px solid black;
+	height: 2em;
+	padding: 0 0 0 1.5em;
+	margin: 0;
+	cursor: pointer;
+	float: left;
+}
+
+.uploadText{
+	height: 2em;
+	padding: 0 0 0 1.5em;
+	margin: 0;
+	float: left;
+	font-size: 0.8em;
+}
+
+.stopButton{
+	background: #e5e5e5 url("../images/delete.png") no-repeat 5% center;
+	border: 1px solid black;
+	height: 2em;
+	padding: 0 0 0 1.5em;
+	margin: 0 0 0 1em;
+	cursor: pointer;
+	float: right;
+}
+
+.fileElem{
+	font-size: 0.8em;
+	width: 100%;
+	float: left;
+}
+
+footer{
+	background-color: #d0d0d0;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	font-size: 0.8em;
+	padding: 0.5em;
+	z-index: 4;
+}
+
+#preview{
+	position: fixed;
+	bottom: 0.9em;
+	right: 0;
+	width: 21em;
+	height: 21em;
+	z-index: 10;
+	border: 0;
+	cursor: pointer;
+}
+
+#sideArrow{
+    position: relative;
+    top: -0.6em;
+    left: -0.75em;
+    background-color: #E5E5E5;
+    width: 20px;
+    padding-left: 4px;
+    padding-top: 4px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#saveMobile{
+    display: none;
+}
+
+@media screen and ( max-width:600px ) {
+    #logo{
+        padding: 0;
+        float: none;
+    }
+
+    header{
+        height: 6em;
+    }
+
+    header h1{
+        margin: 0;
+        font-size: 1.2em;
+        float: none;
+        padding: 0;
+    }
+
+    aside{
+        top: 6em;
+        bottom: 2.8em;
+    }
+
+    section{
+        top: 6em;
+        bottom: 2.8em;
+    }
+
+    footer{
+        height: 2.5em;
+    }
+
+    #footerText{
+        padding: 2em;
+    }
+
+    #languageStrip{
+        right: 0.5em;
+        left: auto;
+        padding-right: 0.4em;
+    }
+
+    #shortLinks{
+        display: none;
+    }
+
+    #txtFilterBar{
+        width: 100%;
+    }
+
+    #newFolder{
+        left: 0;
+        width: auto;
+        height: auto;
+    }
+
+    #saveMobile{
+        display: block;
+        float: right;
+        top: 0.5em;
+        position: relative;
+    }
+}

@@ -1,0 +1,11 @@
+<?php
+define("WEBSITE_DEFAULT_URI", "https://rkwfs.localhost");
+define("UPLOAD_FOLDER", "./uploads");
+define("TEMP_FOLDER", "./temp");
+define("ZIP_METHOD", "BUILD_IN"); // BUILD_IN = Use PHPs ZipArchive, LINUX_EXT = Use Linux' zip-command (compatible)
+define("MAX_ZIP_AGE", 3600); // 1 hour
+
+$WFS_PROJECTS = array(
+	"project1" => "Projekt 1",
+	"project2" => "Projekt 2"
+);

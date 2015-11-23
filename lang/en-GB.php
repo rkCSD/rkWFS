@@ -1,0 +1,20 @@
+<?php
+$lang['path'] = "Path";
+$lang['filter'] = "Filter";
+$lang['type'] = "Type";
+$lang['filename'] = "Name";
+$lang['size'] = "Size";
+$lang['folders'] = "Folders";
+$lang['files'] = "Files";
+$lang['modificationDate'] = "Modification date";
+$lang['filesUpload'] = "File upload or drop files here";
+$lang['progress'] = "Progress";
+$lang['uploadAll'] = "Upload all";
+$lang['js']['back'] = "Back";
+$lang['js']['momentLocale'] = "en";
+$lang['js']['warningDeleteFile'] = "Are you sure you want to delete this file?";
+$lang['js']['warningDeleteFile2'] = "WARNING: This cannot be undone!";
+$lang['js']['upload'] = "Upload";
+$lang['js']['delete'] = "Delete";
+$lang['js']['uploading'] = "Uploading...";
+$lang['js']['uploadFinished'] = "Finished!";

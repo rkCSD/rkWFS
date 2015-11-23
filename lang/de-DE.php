@@ -1,0 +1,20 @@
+<?php
+$lang['path'] = "Pfad";
+$lang['filter'] = "Filter";
+$lang['type'] = "Typ";
+$lang['filename'] = "Name";
+$lang['size'] = "Größe";
+$lang['folders'] = "Ordner";
+$lang['files'] = "Dateien";
+$lang['modificationDate'] = "Änderungsdatum";
+$lang['filesUpload'] = "Dateien hochladen oder hier hineinziehen";
+$lang['progress'] = "Fortschritt";
+$lang['uploadAll'] = "Alles hochladen";
+$lang['js']['back'] = "Zurück";
+$lang['js']['momentLocale'] = "de";
+$lang['js']['warningDeleteFile'] = "Sind Sie sicher, dass Sie die Datei löschen möchten?";
+$lang['js']['warningDeleteFile2'] = "ACHTUNG: Das kann nicht rückgängig gemacht werden!";
+$lang['js']['upload'] = "Hochladen";
+$lang['js']['delete'] = "Löschen";
+$lang['js']['uploading'] = "Lade hoch...";
+$lang['js']['uploadFinished'] = "Fertig!";
