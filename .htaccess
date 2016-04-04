@@ -1,0 +1,8 @@
+RewriteEngine On
+RewriteRule !index\.php - [C]
+RewriteRule !images(.*) - [C]
+RewriteRule !scripts(.*) - [C]
+RewriteRule !styles(.*) - [C]
+RewriteRule !temp(.*) - [C]
+
+RewriteRule ^(.*)$ /index.php?root=$1 [QSA,L]
