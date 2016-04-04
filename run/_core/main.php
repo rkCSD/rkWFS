@@ -56,8 +56,8 @@ if(array_key_exists($project,$WFS_PROJECTS)){
 		case "zip":
 			require_once("./run/classes/zip.php");
 			break;
-		case "download":
 		case "download.php": // Deprecated option, from rkWFS < 3.0
+		case "download":
 			require_once("./run/classes/download.php");
 			break;
 		default:
@@ -65,5 +65,5 @@ if(array_key_exists($project,$WFS_PROJECTS)){
 			require_once("./run/main.php");
 	}
 }else{
-	// ERROR
+	echo "ERROR: No project-name given!";
 }

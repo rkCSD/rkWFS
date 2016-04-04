@@ -86,17 +86,18 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=600" />
 		<link rel="stylesheet" href="<?= WDU?>styles/style.css">
-		<script src="<?= WDU?>scripts/lib/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="<?= WDU?>scripts/lib/jquery-1.12.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			<?php
 				foreach($lang['js'] as $key=>$value){
 					echo "var LANG".$key." = '".$value."';\n";
 				}
+				echo "var wduPath = '".WDU."';\n";
 				echo "var basePath = '".WDU.PROJECT_NAME."';\n";
 				echo "var initialActualPath = '".$initialActualPath."';\n";
 			?>
 		</script>
-		<script src="<?= WDU?>scripts/lib/moment-2.10.6.js" type="text/javascript" charset="utf-8"></script>
+		<script src="<?= WDU?>scripts/lib/moment-2.12.js" type="text/javascript" charset="utf-8"></script>
 		<script src="<?= WDU?>scripts/lib/jquery.ui.widget.js" type="text/javascript" charset="utf-8"></script>
 		<script src="<?= WDU?>scripts/lib/jquery.iframe-transport.js" type="text/javascript" charset="utf-8"></script>
 		<script src="<?= WDU?>scripts/lib/jquery.fileupload.js" type="text/javascript" charset="utf-8"></script>
@@ -177,7 +178,7 @@
 		</section>
 		<footer>
 			<span id="footerText">
-				Copyright &copy; <?= date("Y", time())?> René Knipschild Custom Software Development - <a target="_blank" href="http://www.rkcsd.com/">www.rkcsd.com</a>
+				rkWFS v<?= VERSION ?> - Copyright &copy; <?= date("Y", time())?> René Knipschild Custom Software Development - <a target="_blank" href="http://www.rkcsd.com/">www.rkcsd.com</a>
 			</span>
 		</footer>
 	</body>

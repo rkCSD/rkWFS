@@ -1,7 +1,7 @@
-#rkWFS (Version 3.0)
+#rkWFS (Version 3.0.1)
 Simple Web-Filesystem
 
-Copyright © 2015 rkCSD Eu <email@rkcsd.com>
+Copyright © 2016 rkCSD Eu <email@rkcsd.com>
 Visit our website: http://www.rkcsd.com/
 
 This program is free software; you can redistribute it and/or modify

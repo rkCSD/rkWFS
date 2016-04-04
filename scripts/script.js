@@ -43,19 +43,19 @@ function getAllFiles() {
 
 	$.getJSON(basePath + "/ajax?ajaxReq=files&sortName=" + sortName + "&sortMode=" + sortMode + "&actualPath=" + actualPath, function(data) {
         var newFileList = "";
-		for(id in data.files){
+		for(var id in data.files){
 			var file = data.files[id];
 			newFileList = newFileList + "<tr>" +
-			"<td><img class=\"filetypePicture\" src=\"images/filetypes/" + getFileCategory(file.ext.toLowerCase()) + ".png\" alt=\"" + file.ext.toLowerCase() + "\"/><div class=\"filetypeText size" + file.ext.length + " " + getFileTextColor(file.ext.toLowerCase()) + "\">" + fileTypeTextFormatter(file.ext.toUpperCase()) + "</div></td>" +
+			"<td><img class=\"filetypePicture\" src=\""+wduPath+"images/filetypes/" + getFileCategory(file.ext.toLowerCase()) + ".png\" alt=\"" + file.ext.toLowerCase() + "\"/><div class=\"filetypeText size" + file.ext.length + " " + getFileTextColor(file.ext.toLowerCase()) + "\">" + fileTypeTextFormatter(file.ext.toUpperCase()) + "</div></td>" +
 			"<td onmouseout='imagePreviewRemove()'><a href=\"" + (!file.isDir ? basePath + "/download?dir=" + file.link : "#") + "\" " + (file.isDir ? " onclick=\"enterFolder('" + file.filename + "');\"": "") + "  onmouseover='imagePreview(\"" + file.filename + "\"," + file.preview.width + "," + file.preview.height + ")' onmouseout='imagePreviewRemove()'>" + (file.filename == "!" ? "["+LANGback+"]" : file.filename) + "</a></td>" +
 			"<td>" + (!file.isDir ? formatSize(file.size) : "")  + "</td>" +
 			"<td>" + (file.filename != "!" ? moment.unix(file.modification).locale(LANGmomentLocale).fromNow() + "<br>" + moment.unix(file.modification).locale(LANGmomentLocale).format("L, LTS") : "") + "</td>" +
-			"<td>" + (file.filename != "!" ? "<img class=\"deletePicture\" src=\"images/delete.png\" alt=\"Löschen\" onclick=\"deleteAFile('" + file.filename + "')\" />" : "") + "</td>" +
+			"<td>" + (file.filename != "!" ? "<img class=\"deletePicture\" src=\""+wduPath+"images/delete.png\" alt=\"Löschen\" onclick=\"deleteAFile('" + file.filename + "')\" />" : "") + "</td>" +
 			"</tr>";
 		}
 		$("#fileListData").html(newFileList);
         newFileList = null;
-		$("#sortModeIcon_" + data.sortName).html("<img src=\"images/" + data.sortMode + ".png\" />");
+		$("#sortModeIcon_" + data.sortName).html("<img src=\""+wduPath+"images/" + data.sortMode + ".png\" />");
 		$('#folderCount').html(data.folderCount);
 		$('#fileCount').html(data.fileCount);
 	});
@@ -82,7 +82,7 @@ function imagePreview(filename,width,height){
             width = 21*w;
         }
 
-		$("section").append("<p id='preview' onclick='imagePreviewRemove()'><img style='width:"+width+"em;height:"+height+"em;position:fixed;bottom:1.9em;right:0.5em;border: 1px solid black;' src='" + fullPath + "' /></p>");
+		$("body").append("<p id='preview' onclick='imagePreviewRemove()'><img style='width:"+width+"em;height:"+height+"em;position:fixed;bottom:1.9em;right:0.5em;border: 1px solid black;' src='" + fullPath + "' /></p>");
 	}
 }
 
@@ -169,12 +169,12 @@ $(function() {
 
     $('#sideArrow').click(function(){
         if($('#fileUploadArea').is(":visible")){
-            $('#sideArrowButton').attr("src", "images/left.png");
+            $('#sideArrowButton').attr("src", wduPath+"images/left.png");
             $('#fileUploadArea').hide();
             $('#fileMgmt').css("width", "0.1em");
             $('#listMgmt').css("margin-right", "2.1em");
         }else{
-            $('#sideArrowButton').attr("src", "images/right.png");
+            $('#sideArrowButton').attr("src", wduPath+"images/right.png");
             $('#fileUploadArea').show();
             $('#fileMgmt').css("width", "20em");
             $('#listMgmt').css("margin-right", "22em");

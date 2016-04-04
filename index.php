@@ -22,6 +22,8 @@
  * ===================================================
  */
 
+define("VERSION", "3.0.1");
+
 session_name("rkSessionID");
 session_start();
 
