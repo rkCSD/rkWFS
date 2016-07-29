@@ -67,10 +67,14 @@ if(ZIP_METHOD == "BUILD_IN"){
 			$relativePath = substr($filePath, strlen($rootPath) + 1);
 			if(substr($relativePath,0,1)=="." || strpos($relativePath,"/.")!==false)
 				continue;
+
 			$zip->addFile($filePath, $zipDir.$relativePath);
+			
+			if(version_compare(PHP_VERSION, '7.0.0', '>=')){
+				$zip->setCompressionName($filePath, ZipArchive::CM_STORE);
+			}
 		}
 	}
-
 	$zip->close();
 }elseif(ZIP_METHOD == "LINUX_EXT"){
 	exec("cd \"".UPLOAD_FOLDER."/".PROJECT_NAME."/".$dir."\" && zip -r0 \"$zipFileName\" . -x \".*\"");
