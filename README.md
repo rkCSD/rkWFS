@@ -1,4 +1,3 @@
-[Setup (German)](https://wiki.reneknipschild.net/comp:www:setuprkwfs)
 # rkWFS (Version 3.0.2)
 Simple Web-Filesystem
 
@@ -24,6 +23,8 @@ For running rkWFS, a web server with PHP >= 5.3 configured, is required.
 You are free to change logo and skin of the application to use it for
 your own company/organisation. If you've trouble running and using it,
 we offer paid support. Contact us: +49 5631 9189488 / email@rkcsd.com
+
+[Setup (German)](https://wiki.reneknipschild.net/comp:www:setuprkwfs)
 
 ### Base Installation
 
