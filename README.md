@@ -1,8 +1,8 @@
 [Setup (German)](https://wiki.reneknipschild.net/comp:www:setuprkwfs)
-# rkWFS (Version 3.0.1)
+# rkWFS (Version 3.0.2)
 Simple Web-Filesystem
 
-Copyright © 2016 rkCSD Eu <email@rkcsd.com>
+Copyright © 2017 rkCSD Eu <email@rkcsd.com>
 Visit our website: http://www.rkcsd.com/
 
 This program is free software; you can redistribute it and/or modify

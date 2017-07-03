@@ -32,12 +32,18 @@ if($mode=="download.php"){ // Deprecated option, from rkWFS < 3.0
 }
 
 if($filename=="..") $filename = "";
+if(substr($filename,-1)=="/")
+	$filename = substr($filename,0,-1);
+
 $filename = UPLOAD_FOLDER."/".PROJECT_NAME."/".str_replace(array("\\", "/"), "/", $filename);
 $filename = str_replace(array("../","/.."),"",$filename);
 $pureFilename = substr($filename,strrpos($filename,"/")+1);
 
 if(strpos($filename,".htaccess") || !file_exists($filename))
 	die("FATAL ERROR: The file you are looking for does not exist.");
+
+if(is_dir($filename))
+	die("FATAL ERROR: You cannot download a whole dir!");
 
 $size = filesize($filename);
 header("Content-Type: application/octet-stream");
